@@ -1,4 +1,4 @@
-while True:
+for i in range(2,6,2):
     try:
         age = int(input("Enter your age: "))
         if age < 15:
@@ -8,7 +8,4 @@ while True:
         else:
             print("enter a proper age")
     except:
-        print("please give numbers")
-    run = input("Do you want to continue??(y/n)\n")
-    if run == "n":
-        break
+        print("please give numbers") 
