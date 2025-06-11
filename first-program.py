@@ -1,2 +1,2 @@
-name = input("Enter your name: ")
-print(f"hello, {name}") #string formatting
+age = int(input("Enter your age: "))#casting from str to int
+print(type(age)) #to know which data type
