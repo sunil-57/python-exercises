@@ -25,6 +25,10 @@ class Math_Teacher(Teacher):#inheriting the Parent class (Teacher)
     def get_strict(self):
         return self.__strict
     
+    def give_assignment(self): #polymorphism method overriding
+        print("Complete the Formula")
+        
+        
 class English_Teacher(Teacher):
     def __init__(self, name, age, polite):
         super().__init__(name, age)
@@ -38,5 +42,5 @@ math_teacher1 = Math_Teacher("Sunil", 25, "Very Strict")
 # print(teacher1.name)
 
 #calling the function of the class
-math_teacher1.give_assignment()
 print(math_teacher1.get_name())
+math_teacher1.give_assignment()
