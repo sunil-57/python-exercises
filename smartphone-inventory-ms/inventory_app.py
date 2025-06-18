@@ -6,10 +6,16 @@ phone_inventory = []
 
 #TODO add a phone in inventory
 #TODO ask the phone details from user before adding the phone to inventory
-phone = Phone("S20","Samsung", 50000, "32 GB", 30 )
-phone1 = Phone("S23","Samsung", 70000, "32 GB", 30 )
+#TODO 
+model = input("Enter the phone model: ")
+brand = input("Enter the phone brand: ")
+price = int(input("Enter the phone price: "))
+storage = input("Enter the phone storage: ")
+quantity = int(input("Enter the phone quantity: "))
+
+phone = Phone(model,brand, price, storage, quantity)
+
 phone_inventory.append(phone)
-phone_inventory.append(phone1)
 
 # print(phone_inventory)
 
