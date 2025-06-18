@@ -11,11 +11,14 @@ phone1 = Phone("S23","Samsung", 70000, "32 GB", 30 )
 phone_inventory.append(phone)
 phone_inventory.append(phone1)
 
-print(phone_inventory)
+# print(phone_inventory)
 
 
 #TODO view details of a phone
-
+#TODO how do i show information of the phone that the user wants?
+for phone in phone_inventory:
+    print(f"Phone Model: {phone.get_model()}")
+    print(f"Phone Brand: {phone.get_brand()}")
 
 
 #TODO update detail of phones
