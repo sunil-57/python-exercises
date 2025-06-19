@@ -49,7 +49,15 @@ def update_phone_details():
     
 #TODO delete a phone
 def delete_phone():
-    pass
+    model_number_to_delete = input("Enter the phone model to delete: ")
+    for phone in phone_inventory:
+        if model_number_to_delete == phone.get_model():
+            phone_inventory.remove(phone)
+            print(f"{model_number_to_delete} has been removed from the records....\n")
+            return
+        else:
+            print(f"{model_number_to_delete} not found in the records....\n")
+            return
 
 
 
