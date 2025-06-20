@@ -7,7 +7,7 @@ phone_inventory = [Phone("Pixel 8","Google",45000, "16 GB", 23),
                    Phone("Iphone 12","Apple",120000, "16 GB", 523),
                    Phone("S24","Samsung",220000, "256 GB", 22)]
 
-#these are changes 
+#these are changes from main branch
 
 # add a phone in inventory
 # ask the phone details from user before adding the phone to inventory
