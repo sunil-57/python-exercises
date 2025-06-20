@@ -55,34 +55,34 @@ def delete_phone():
             return
         
     print(f"{model_number_to_delete} not found in the records....\n")
-        
-
-
-
-
-
-
+    
 # how to allow users to do the operations?
 # how to let the user use the program as much as they want?
 # how to let the user exit the program?
-# def menu():
-while(True):
-    print("Enter 1 to add phone: ")
-    print("Enter 2 to view phone detail: ")
-    print("Enter 3 to update phone detail: ")
-    print("Enter 4 to remove a phone: ")
-    print("Enter 5 to exit: ")
-    option = int(input("Choose an option: "))
-    if(option == 1):
-        add_phone()
-    elif(option == 2):
-        view_phone_details()
-    elif(option == 3):
-        update_phone_details()
-    elif(option == 4):
-        delete_phone()
-    elif(option == 5):
-        print("Thank you, See You Again!!")
-        break
-    else:
-        print("Enter the options from (1 to 5)\n")
+def menu():
+    while(True):
+        print("Enter 1 to add phone: ")
+        print("Enter 2 to view phone detail: ")
+        print("Enter 3 to update phone detail: ")
+        print("Enter 4 to remove a phone: ")
+        print("Enter 5 to exit: ")
+        option = int(input("Choose an option: "))
+        if(option == 1):
+            add_phone()
+        elif(option == 2):
+            view_phone_details()
+        elif(option == 3):
+            update_phone_details()
+        elif(option == 4):
+            delete_phone()
+        elif(option == 5):
+            print("Thank you, See You Again!!")
+            break
+        else:
+            print("Enter the options from (1 to 5)\n")
+
+if __name__ == '__main__':# to execute the file only when used
+# when a module is imported in another module, 
+# then the Python interpreter will assign the string with 
+# the name of that module to the special variable __name__
+    menu()
