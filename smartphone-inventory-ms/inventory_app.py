@@ -1,4 +1,6 @@
 from phone import Phone
+import json
+from pathlib import Path
 
 #how do i implement my inventory?
 phone_inventory = [Phone("Pixel 8","Google",45000, "16 GB", 23),
