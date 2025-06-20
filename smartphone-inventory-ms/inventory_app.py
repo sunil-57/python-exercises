@@ -1,9 +1,9 @@
 from phone import Phone
 
 #how do i implement my inventory?
-phone_inventory = [Phone("model","brand",223, "storage", 23),
-                   Phone("test1","testbrand1",22223, "teststorage1", 523),
-                   Phone("test2","testbrand2",22355, "teststorage2", 223)]
+phone_inventory = [Phone("Pixel 8","Google",45000, "16 GB", 23),
+                   Phone("Iphone 12","Apple",120000, "16 GB", 523),
+                   Phone("S24","Samsung",220000, "256 GB", 22)]
 
 
 # add a phone in inventory
@@ -11,10 +11,10 @@ phone_inventory = [Phone("model","brand",223, "storage", 23),
 #TODO need to handle exceptions
 #TODO how to prevent duplicate phone model numbers??
 def add_phone():
-    model = input("Enter the phone model: ")
-    brand = input("Enter the phone brand: ")
+    model = input("Enter the phone model: ").strip()
+    brand = input("Enter the phone brand: ").strip()
     price = int(input("Enter the phone price: "))
-    storage = input("Enter the phone storage: ")
+    storage = input("Enter the phone storage: ").strip()
     quantity = int(input("Enter the phone quantity: "))
 
     phone = Phone(model,brand, price, storage, quantity)
@@ -24,14 +24,12 @@ def add_phone():
 # view details of a phone
 #TODO how do i show information of the phone that the user wants?
 def view_phone_details():
+    i = 1
+    print("| S.N | Phone Model   |  Brand  |  Storage  |  Price  |  Quantity  |")
     for phone in phone_inventory:
-        print(f"Phone Model: {phone.get_model()}")
-        print(f"Phone Brand: {phone.get_brand()}")
-        print(f"Phone Storage: {phone.get_storage()}")
-        print(f"Phone Price: {phone.get_price()}")
-        print(f"Phone Quantity: {phone.get_quantity()}")
-        print("\n")
-
+        print("-----------------------------------------------------------------")
+        print(f"| {i} | {phone.get_model()} | {phone.get_brand()} | {phone.get_storage()} | {phone.get_price()} | {phone.get_quantity()}  |")
+        i = i+1
 # update detail of phones
 def update_phone_details():
     model_number_to_update = input("Enter the phone model number to update: ")
@@ -66,20 +64,25 @@ def menu():
         print("Enter 3 to update phone detail: ")
         print("Enter 4 to remove a phone: ")
         print("Enter 5 to exit: ")
-        option = int(input("Choose an option: "))
-        if(option == 1):
-            add_phone()
-        elif(option == 2):
-            view_phone_details()
-        elif(option == 3):
-            update_phone_details()
-        elif(option == 4):
-            delete_phone()
-        elif(option == 5):
-            print("Thank you, See You Again!!")
-            break
-        else:
-            print("Enter the options from (1 to 5)\n")
+        try:
+            option = int(input("Choose an option: "))
+            if(option == 1):
+                add_phone()
+            elif(option == 2):
+                view_phone_details()
+            elif(option == 3):
+                update_phone_details()
+            elif(option == 4):
+                delete_phone()
+            elif(option == 5):
+                print("Thank you, See You Again!!")
+                break
+            else:
+                print("Enter the options from (1 to 5)\n")
+        except ValueError:
+            print("Invalid entry!!! Enter from 1 to 5...")
+        except:
+            print("Cannot perform the action!!!")
 
 if __name__ == '__main__':# to execute the file only when used
 # when a module is imported in another module, 
