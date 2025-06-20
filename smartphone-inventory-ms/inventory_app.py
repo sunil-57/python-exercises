@@ -32,7 +32,7 @@ def view_phone_details():
         print(f"Phone Quantity: {phone.get_quantity()}")
         print("\n")
 
-#TODO update detail of phones
+# update detail of phones
 def update_phone_details():
     model_number_to_update = input("Enter the phone model number to update: ")
     for phone in phone_inventory:
@@ -43,11 +43,9 @@ def update_phone_details():
             phone.set_brand(new_brand)
             print(f"{model_number_to_update} has been updated\n")
             return
-        else:
-            print(f"{model_number_to_update} not found in records\n")
-            return
-    
-#TODO delete a phone
+    print(f"{model_number_to_update} not found in records\n")
+             
+# delete a phone
 def delete_phone():
     model_number_to_delete = input("Enter the phone model to delete: ")
     for phone in phone_inventory:
@@ -55,9 +53,9 @@ def delete_phone():
             phone_inventory.remove(phone)
             print(f"{model_number_to_delete} has been removed from the records....\n")
             return
-        else:
-            print(f"{model_number_to_delete} not found in the records....\n")
-            return
+        
+    print(f"{model_number_to_delete} not found in the records....\n")
+        
 
 
 
