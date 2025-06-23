@@ -9,6 +9,16 @@ phone_inventory = [Phone("Pixel 8","Google",45000, "16 GB", 23),
 
 DATA_FILE = Path("phone_inventory.json")
 
+def load_inventory():
+    with DATA_FILE.open("r") as f:
+        data = json.load(f)            
+        return ([Phone.from_dict(item)] for item in data)
+
+
+def save_inventory(phone_inventory):
+       with DATA_FILE.open("w") as f:
+           json.dump((phone.to_dict() for phone in phone_inventory), f, 4)
+
 # add a phone in inventory
 # ask the phone details from user before adding the phone to inventory
 #TODO need to handle exceptions
@@ -24,6 +34,7 @@ def add_phone():
 
     phone_inventory.append(phone)
     
+    save_inventory(phone_inventory)
 
 # view details of a phone
 #TODO how do i show information of the phone that the user wants?
@@ -45,6 +56,7 @@ def update_phone_details():
             phone.set_brand(new_brand)
             print(f"{model_number_to_update} has been updated\n")
             return
+    save_inventory(phone_inventory)
     print(f"{model_number_to_update} not found in records\n")
              
 # delete a phone
@@ -55,7 +67,7 @@ def delete_phone():
             phone_inventory.remove(phone)
             print(f"{model_number_to_delete} has been removed from the records....\n")
             return
-        
+    save_inventory(phone_inventory)  
     print(f"{model_number_to_delete} not found in the records....\n")
     
 # how to allow users to do the operations?

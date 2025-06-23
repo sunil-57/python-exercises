@@ -40,3 +40,20 @@ class Phone:
    
     def get_quantity(self) -> int:
        return self.__quantity        
+   
+    def to_dict(self) -> dict:
+        return {
+            "model": self.__model,
+            "brand": self.__brand,
+            "price": self.__price,
+            "storage": self.__storage,
+            "quantity": self.__quantity
+        }
+    
+    @staticmethod    
+    def from_phone(self, item):
+        return Phone(item["model"],
+                     item["brand"],
+                     item["price"],
+                     item["storage"],
+                     item["quantity"])
