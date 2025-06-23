@@ -7,8 +7,7 @@ phone_inventory = [Phone("Pixel 8","Google",45000, "16 GB", 23),
                    Phone("Iphone 12","Apple",120000, "16 GB", 523),
                    Phone("S24","Samsung",220000, "256 GB", 22)]
 
-
-#these are changes from main branch and feature branch but merged together
+DATA_FILE = Path("phone_inventory.json")
 
 # add a phone in inventory
 # ask the phone details from user before adding the phone to inventory
@@ -24,6 +23,7 @@ def add_phone():
     phone = Phone(model,brand, price, storage, quantity)
 
     phone_inventory.append(phone)
+    
 
 # view details of a phone
 #TODO how do i show information of the phone that the user wants?
