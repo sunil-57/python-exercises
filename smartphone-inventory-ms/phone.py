@@ -1,4 +1,4 @@
-# TODO create a class name Phone
+# create a class name Phone
 # with private attributes brand, model, model number, price, storage
 # create setters and getters for the private attributes
 class Phone:
@@ -40,3 +40,20 @@ class Phone:
    
     def get_quantity(self) -> int:
        return self.__quantity        
+   
+    def to_dict(self) -> dict:
+        return {
+            "model": self.__model,
+            "brand": self.__brand,
+            "price": self.__price,
+            "storage": self.__storage,
+            "quantity": self.__quantity
+        }
+    
+    @staticmethod    
+    def from_dict(item):
+        return Phone(item["model"],
+                     item["brand"],
+                     item["price"],
+                     item["storage"],
+                     item["quantity"])
