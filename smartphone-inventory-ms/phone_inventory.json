@@ -1,0 +1,37 @@
+[
+    {
+        "model": "Pixel 8",
+        "brand": "Google",
+        "price": 45000,
+        "storage": "16 GB",
+        "quantity": 23
+    },
+    {
+        "model": "Iphone 12",
+        "brand": "Apple",
+        "price": 120000,
+        "storage": "16 GB",
+        "quantity": 523
+    },
+    {
+        "model": "S24",
+        "brand": "Samsung",
+        "price": 220000,
+        "storage": "256 GB",
+        "quantity": 22
+    },
+    {
+        "model": "21",
+        "brand": "21",
+        "price": 21,
+        "storage": "21",
+        "quantity": 21
+    },
+    {
+        "model": "11",
+        "brand": "1",
+        "price": 1,
+        "storage": "1",
+        "quantity": 1
+    }
+]
