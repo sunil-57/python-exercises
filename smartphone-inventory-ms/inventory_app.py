@@ -29,8 +29,10 @@ def add_phone(phone_inventory):
     phone = Phone(model,brand, price, storage, quantity)
 
     phone_inventory.append(phone)
+
     print(f"{model} added succesfully!!")
     save_inventory(phone_inventory)
+
 
 # view details of a phone
 #TODO how do i show information of the phone that the user wants?
