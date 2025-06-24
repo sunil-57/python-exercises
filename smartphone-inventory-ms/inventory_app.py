@@ -29,8 +29,8 @@ def add_phone(phone_inventory):
     phone = Phone(model,brand, price, storage, quantity)
 
     phone_inventory.append(phone)
-    
     save_inventory(phone_inventory)
+    print(f"{model} added succesfully!!")
 
 # view details of a phone
 #TODO how do i show information of the phone that the user wants?
@@ -41,6 +41,8 @@ def view_phone_details(phone_inventory):
         print("-----------------------------------------------------------------")
         print(f"| {i} | {phone.get_model()} | {phone.get_brand()} | {phone.get_storage()} | {phone.get_price()} | {phone.get_quantity()}  |")
         i = i+1
+        
+        
 # update detail of phones
 def update_phone_details(phone_inventory):
     model_number_to_update = input("Enter the phone model number to update: ").strip()
@@ -97,7 +99,8 @@ def menu():
         # except:
         #     print("Cannot perform the action!!!")
 
-if __name__ == '__main__':# to execute the file only when used
+if __name__ == '__main__':
+# to execute the file only when used
 # when a module is imported in another module, 
 # then the Python interpreter will assign the string with 
 # the name of that module to the special variable __name__
